@@ -30,6 +30,20 @@ void Particle::update() {
 	}else{lifespan =0;
 		
 	}
+	
+	if(pos.x>ofGetWidth()){
+		vel.x=-vel.x;
+	}
+	if(pos.x<0){
+		vel.x=-vel.x;
+	}
+		if(pos.y<0){
+		vel.y=-vel.y;
+	}
+		if(pos.y>ofGetHeight()){
+		vel.y=-vel.y;
+	}
+	
     
 }
 
