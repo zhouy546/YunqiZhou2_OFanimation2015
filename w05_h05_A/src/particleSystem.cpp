@@ -8,15 +8,16 @@
 
 #include "particleSystem.h"
 
-particleSystem::particleSystem(ofVec2f _pos){
+particleSystem::particleSystem(ofVec2f _pos,ofVec2f _vel){
     pos = _pos;
+	vel = _vel;
 }
 
 //--------------------------------------------------------------
 void particleSystem::update(ofVec2f _force){
     
     for (int i = 0; i < 10; i++) {
-        Particle particle(pos);
+        Particle particle(pos,vel);
         particleList.push_back(particle);
         
     }
@@ -27,8 +28,8 @@ void particleSystem::update(ofVec2f _force){
         particleList[i].update();
     }
     
-    while (particleList.size() > 600) {
-		particleList.erase(particleList.begin());
+    while (particleList.size() > 1000) {
+        particleList.erase(particleList.begin());
     }
     
 }

@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofBackground(0);
-    gravity.set(0, 0.02);
+    gravity.set(0, 0.008);
     
 }
 
@@ -51,8 +51,12 @@ void ofApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-		    particleSystem system(ofVec2f(x, y));
+	for (int i = 0; i < 6; i++)
+	{
+	particleSystem system(ofVec2f(x, y),ofVec2f(sin(i),cos(i) ));
     systems.push_back(system);
+	}
+	
 }
 
 //--------------------------------------------------------------

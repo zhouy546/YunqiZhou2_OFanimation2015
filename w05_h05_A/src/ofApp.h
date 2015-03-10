@@ -18,7 +18,11 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		 
-		vector<particleSystem> systems;
+		
+
+		    
+    vector<particleSystem> systems;
     ofVec2f gravity;
+
+		
 };

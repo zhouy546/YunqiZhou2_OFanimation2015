@@ -13,7 +13,7 @@
 class Particle {
 public:
     
-    Particle(ofVec2f _pos);
+    Particle(ofVec2f _pos,ofVec2f _vel);
     
     void setup();
     

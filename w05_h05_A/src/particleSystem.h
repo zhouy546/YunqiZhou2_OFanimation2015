@@ -14,11 +14,11 @@
 class particleSystem {
 public:
     
-    particleSystem(ofVec2f _pos);
+    particleSystem(ofVec2f _pos,ofVec2f _vel);
     void update(ofVec2f _force);
     void draw();
     
     vector<Particle> particleList;
-    ofVec2f pos;
+    ofVec2f pos,vel;
     
 };
